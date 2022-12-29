@@ -16,7 +16,7 @@ void print_stars(int r){
 
 int main(){
     int rows=5;
-    for(int i=rows;i>=1;i--){
+    for(int i=rows;i>=1;--i){
         print_spaces(i);
         print_stars(i);
         printf("\n");
