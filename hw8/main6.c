@@ -31,7 +31,7 @@ void print_house(n){
     printf("\n");
 }
 int main(){
-    int n=10;
+    int n=4;
     for(int i=n;i>0;--i){
         print_spaces(i);
         print_stars(i,n);

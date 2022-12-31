@@ -12,6 +12,6 @@ int main(){
     int n=1234;
     int sum=0;
     sum=get_digit(n);
-    printf("sum = %d\n",sum);
+    printf("%d\n",sum);
     return 0;
 }
