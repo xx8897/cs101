@@ -1,21 +1,31 @@
 #include <stdio.h>
-int get_binary(int n){
-    int count=1;
+
+void get_binary(int n){
+    int count=0;
     float j=(float)n;
-    while(j>1){
+    while(j>=1){
         count++;
         j=j/(float)16;
     }
-    printf("jj%f\n",j);
-    return count,j;
+    while(count>0){
+        for(int i=0;i<4;i++){
+            j*=2;
+            if(j>=1){
+                j-=1;
+                printf("%d",1);
+            }
+            else{
+                printf("%d",0);
+            }
+        }
+        count--;
+        printf(" ");
+    }
+    printf("\n");
 }
 int main(){
-    int i =15;
+    int i =6;
     int count;
-    float j;
-    count,j=get_binary(i);
-    printf("count%d\n",i);
-    j=(float)15/16;
-    printf("j%f\n",j);
-
+    get_binary(i);
+    return 0;
 }

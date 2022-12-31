@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 void print_spaces(int r){
     int i;
     for(i=0;i<r-1;i++){
@@ -15,7 +14,7 @@ void print_stars(int r,int rows){
 }
 int main(){
     int rows=5;
-    for(int i=rows;i>=1;--i){
+    for(int i=rows;i>0;--i){
         print_spaces(i);
         print_stars(i,rows);
     }

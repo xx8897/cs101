@@ -1,26 +1,30 @@
 #include <stdio.h>
 
 void print_spaces(int r){
-    int i;
-    for(i=0;i<r-1;i++){
+    int j;
+    for(j=0;j<r-1;j++){
         printf(" ");
     }
 }
 void print_stars(int r,int rows){
-    int i;
-    for(i=0;i<2*(rows-r)+1;i++){
+    int j;
+    for(j=0;j<2*(rows-r)+1;j++){
         printf("*");
     }
     printf("\n");
 }
 
 int main(){
-    int rows=4;
-    int i=0;
-    for(i=0)
-    for(i=rows;i>0;--i){
-        print_spaces(i);
-        print_stars(i,rows);
+    int i=4;
+    int j=0;
+    for(j=1;j<i+1;j++){
+        if(j==i)continue;
+        print_spaces(j);
+        print_stars(j,i);
+    }
+    for(j=i;j>0;--j){
+        print_spaces(j);
+        print_stars(j,i);
     }
     return 0;
 }

@@ -13,21 +13,29 @@ void print_stars(int r,int rows){
     }
     printf("\n");
 }
-void print_house(int rows){
-    print_stars(1,rows);
-    for(int i=0;i<rows;i++){
+void print_house(n){
+    for(int j=0;j<2*n-1;j++){
         printf("*");
-        print_spaces(2*rows-2);
+    }
+    printf("\n");
+    for(int i=0;i<n;i++){
+        printf("*");
+        for(int j=0;j<2*n-3;j++){
+            printf(" ");
+        }
         printf("*\n");
     }
-    print_stars(1,rows);
+    for(int j=0;j<2*n-1;j++){
+        printf("*");
+    }
+    printf("\n");
 }
 int main(){
-    int rows=4;
-    for(int i=rows;i>0;--i){
+    int n=10;
+    for(int i=n;i>0;--i){
         print_spaces(i);
-        print_stars(i,rows);
+        print_stars(i,n);
     }
-    print_house(rows);
+    print_house(n);
     return 0;
 }
