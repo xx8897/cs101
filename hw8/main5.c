@@ -34,6 +34,7 @@ void print_truck(){
     }
 }
 int main(){
+    printf("  X'mas tree!\n");
     print_top();
     print_truck();
-}
+}cd
